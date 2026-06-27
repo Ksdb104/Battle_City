@@ -87,7 +87,7 @@ const config = {
 | **键盘 方案A** | W A S D | 空格 | Enter | P |
 | **键盘 方案B** | ↑ ↓ ← → | Num1 | Num2 | P |
 | **键盘 方案C** | I J K L | U | O | P |
-| **手柄** | 摇杆 / 十字键 | A / X | Start | — |
+| **手柄** | 摇杆 / 十字键 | A | Start | X |
 | **触屏** | 虚拟十字键 | FIRE 按钮 | START 按钮 | PAUSE 按钮 |
 
 本地双人时，先按 Start 的设备自动绑定为 P1，第二个设备加入为 P2。
@@ -111,15 +111,35 @@ const config = {
 示例（第 3 关）：
 
 ```
-  BBBBBBBB      BBBBBBBB
-  BB    BB      BB    BB
-  BB    BBBB  BBBB    BB
-WWWW    BB  TT  BB    WWWW
-WWWW  SSBB  TT  BBSS  WWWW
-         ...
-           BBBB
-           BEEB
-           B  B
+  // ─── 第 3 关：水域 + 树林 ───
+  [
+    "        SS      SS        ",
+    "        SS      SS        ",
+    "  BBBBBBBB      BBBBBBBB  ",
+    "  BBBBBBBB      BBBBBBBB  ",
+    "  BB    BB      BB    BB  ",
+    "  BB    BB      BB    BB  ",
+    "  BB    BBBB  BBBB    BB  ",
+    "  BB    BBBB  BBBB    BB  ",
+    "        BB      BB        ",
+    "        BB      BB        ",
+    "WWWW    BB  TT  BB    WWWW",
+    "WWWW    BB  TT  BB    WWWW",
+    "WWWW  SSBB  TT  BBSS  WWWW",
+    "WWWW  SSBB  TT  BBSS  WWWW",
+    "WWWW    BB  TT  BB    WWWW",
+    "WWWW    BB  TT  BB    WWWW",
+    "        BB      BB        ",
+    "        BB      BB        ",
+    "  BB    BBBBSSBBBB    BB  ",
+    "  BB    BBBB  BBBB    BB  ",
+    "  BB    BB      BB    BB  ",
+    "  BB    BB      BB    BB  ",
+    "                          ",
+    "           BBBB           ",
+    "           BEEB           ",
+    "           B  B           "
+  ],
 ```
 
 ![关卡设计示例](level.png)
