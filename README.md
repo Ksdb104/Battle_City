@@ -27,8 +27,8 @@
 前端全部为静态文件，clone 后用任意静态服务器部署即可：
 
 ```bash
-git clone https://github.com/yourname/Battle_City_network.git
-cd Battle_City_network
+git clone https://github.com/Ksdb104/Battle_City
+cd Battle_City
 
 # 方式一：Nginx / Caddy 等指向此目录
 # 方式二：快速预览
