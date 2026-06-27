@@ -175,7 +175,6 @@ Battle_City_network/
 ## 🙏 致谢
 
 - [feichao93/battle-city](https://github.com/feichao93/battle-city) — 敌人行动逻辑参考，部分音频素材来源
-- [Ksdb104/WebRTCMeeting](https://github.com/Ksdb104/WebRTCMeeting) — 信令服务器
 
 ---
 
