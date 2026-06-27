@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <!-- 强制横屏已移除，默认竖屏 -->
+  <meta name="screen-orientation" content="portrait" />
+  <title>坦克大战 · Battle City</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="machine">
+    <div class="screen">
+      <div class="game-area">
+        <canvas id="game" width="416" height="416"></canvas>
+      </div>
+      <!-- 移动端紧凑 HUD（竖屏在 canvas 下方，横屏在右侧） -->
+      <div class="mobile-hud" id="mobileHud">
+        <span class="mhud-item">关卡 <b id="mhudStage">1</b></span>
+        <span class="mhud-item">敌军 <b id="mhudEnemy">20</b></span>
+        <span class="mhud-item">P1 <b id="mhudP1">2</b></span>
+        <span class="mhud-item mhud-p2" id="mhudP2Wrap">P2 <b id="mhudP2">2</b></span>
+      </div>
+      <aside class="sidebar" id="sidebar">
+        <!-- <div class="logo">坦克<br />大战</div> -->
+
+        <div class="panel enemies">
+          <div class="panel-title">敌军</div>
+          <div class="enemy-icons" id="enemyIcons"></div>
+        </div>
+
+        <div class="panel">
+          <div class="stat">
+            <span class="label">得分</span>
+            <span class="value" id="score">0</span>
+          </div>
+          <div class="stat">
+            <span class="label">最高</span>
+            <span class="value" id="hiscore">20000</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="stat">
+            <span class="label">关卡</span>
+            <span class="value flag" id="stage">1</span>
+          </div>
+          <div class="stat lives">
+            <span class="label">P1 生命</span>
+            <div class="life-icons" id="lifeIcons"></div>
+          </div>
+        </div>
+
+        <div class="panel" id="p2Panel" style="display:none">
+          <div class="stat lives lives-p2">
+            <span class="label">P2 生命</span>
+            <div class="life-icons" id="lifeIcons2"></div>
+          </div>
+        </div>
+
+        <div class="panel help">
+          <div class="panel-title">操作</div>
+          <ul>
+            <li><b>WASD+空格</b> 方案A</li>
+            <li><b>↑↓←→+Num1</b> 方案B</li>
+            <li><b>IJKL+U</b> 方案C</li>
+            <li><b>Enter/Num2/O</b> Start</li>
+            <li><b>P</b> 暂停</li>
+            <li><b>手柄</b> 摇杆+A/X</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 移动端虚拟手柄 -->
+  <div id="virtual-pad" class="virtual-pad">
+    <div class="vpad-left">
+      <div class="vpad-dpad" id="vpad-dpad">
+        <div class="dpad-arrow dpad-up">▲</div>
+        <div class="dpad-arrow dpad-right">▶</div>
+        <div class="dpad-arrow dpad-down">▼</div>
+        <div class="dpad-arrow dpad-left">◀</div>
+        <div class="dpad-center"></div>
+      </div>
+    </div>
+    <div class="vpad-mid">
+      <button class="vpad-btn vpad-start" id="vpad-start">START</button>
+      <button class="vpad-btn vpad-pause" id="vpad-pause">PAUSE</button>
+      <button class="vpad-btn vpad-landscape" id="vpad-landscape" title="切换横屏">⤢</button>
+    </div>
+    <div class="vpad-right">
+      <button class="vpad-btn vpad-fire" id="vpad-fire">FIRE</button>
+    </div>
+  </div>
+
+  <script src="js/constants.js"></script>
+  <script src="js/input.js"></script>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="js/syncMessage.js"></script>
+  <script src="js/netManager.js"></script>
+  <script src="js/streamManager.js"></script>
+  <script src="js/inputBridge.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/entities.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
