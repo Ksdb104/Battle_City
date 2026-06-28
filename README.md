@@ -149,7 +149,7 @@ const config = {
 ## 📁 项目结构
 
 ```
-Battle_City_network/
+Battle_City/
 ├── index.html          # 入口页面
 ├── css/style.css       # 样式（响应式 + 移动端适配）
 ├── js/
